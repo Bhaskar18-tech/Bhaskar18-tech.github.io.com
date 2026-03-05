@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nova Market | Everyday Essentials</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="topbar container">
+        <h1 class="brand">Nova Market</h1>
+        <div class="actions">
+          <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+          <button id="cart-btn" aria-label="Shopping cart">🛒 <span id="cart-count">0</span></button>
+        </div>
+      </nav>
+      <div class="hero-content container">
+        <p class="pill">Fresh deals every day</p>
+        <h2>Your local shop, now online.</h2>
+        <p>
+          Browse quality groceries and household essentials, add them to your cart,
+          and enjoy a clean, fast shopping experience.
+        </p>
+        <a href="#products" class="cta">Shop now</a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="controls">
+        <input id="search" type="search" placeholder="Search products..." />
+        <select id="category">
+          <option value="all">All categories</option>
+          <option value="produce">Produce</option>
+          <option value="dairy">Dairy</option>
+          <option value="bakery">Bakery</option>
+          <option value="household">Household</option>
+        </select>
+      </section>
+
+      <section id="products" class="product-grid"></section>
+    </main>
+
+    <footer class="container footer">
+      <p>© <span id="year"></span> Nova Market. Built for modern shopping.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
