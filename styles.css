@@ -1,0 +1,170 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #14213d;
+  --muted: #4f5d75;
+  --accent: #2a9d8f;
+  --accent-2: #e76f51;
+  --border: #dce1ea;
+  --shadow: 0 12px 30px rgba(20, 33, 61, 0.08);
+}
+
+:root.dark {
+  color-scheme: dark;
+  --bg: #101521;
+  --card: #1a2233;
+  --text: #f1f5ff;
+  --muted: #b9c2d8;
+  --accent: #6cd6cb;
+  --accent-2: #ff9b7e;
+  --border: #2f3a4f;
+  --shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--accent) 0%, #264653 100%);
+  color: #fff;
+  padding-bottom: 3rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.brand {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.actions button {
+  border: none;
+  border-radius: 0.7rem;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#theme-toggle {
+  background: #ffffff;
+}
+
+#cart-btn {
+  background: var(--accent-2);
+  color: #fff;
+}
+
+.hero-content {
+  padding: 3rem 0 1rem;
+  max-width: 670px;
+}
+
+.hero-content h2 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  margin: 0.7rem 0;
+}
+
+.pill {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.18);
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.8rem;
+}
+
+.controls {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.controls input,
+.controls select {
+  padding: 0.8rem 1rem;
+  border-radius: 0.8rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+}
+
+.controls input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  margin: 0.4rem 0;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.price {
+  font-weight: 700;
+  margin: 0.75rem 0;
+}
+
+.card button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+
+.footer {
+  padding: 1rem 0 2rem;
+  color: var(--muted);
+}
